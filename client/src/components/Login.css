@@ -37,6 +37,13 @@ form {
       padding: 10px 5px;
     }
 
+    .input-container > .error-message {
+      min-height: 14px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #ff4d4f;
+    }
+
   .submit {
     margin-top: .5rem;
     width: 100%;
