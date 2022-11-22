@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 import './Login.css';
 
 interface LoginProps {
@@ -54,7 +54,6 @@ const Login: React.FC<LoginProps> = props => {
   return (
     <div className="Login">
       <form onSubmit={loginSubmitHandler}>
-        <h2 className="logo">J</h2>
         <h1 className="header">Login</h1>
         <div className="input-container">
           <label htmlFor="username">

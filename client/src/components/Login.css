@@ -5,20 +5,19 @@
   text-align: center;
   padding: 3rem;
   border-radius: 5px;
-  border: 1px solid black;
+  background-color: #fff;
+  box-shadow: 0px 2px 8px 2px rgba(0, 0, 0, 0.2);
 }
 
 form {
   width: 100%;
 }
 
-  .logo {
-    margin-bottom: 1.5rem;
-  }
-
   .header {
     margin-bottom: 1rem;
     letter-spacing: 1px;
+    cursor: default;
+    color: #639;
   }
 
   .input-container {
@@ -31,10 +30,22 @@ form {
 
     .input-container > label {
       letter-spacing: .5px;
+      font-size: 15px;
+      color: #639;
+      font-weight: bold;
     }
 
     .input-container > input {
-      padding: 10px 5px;
+      padding: 10px;
+      border: 2px solid #a3a3a3;
+      border-radius: 4px;
+      background-color: #fafafa;
+      transition: 0.4s ease-in-out;
+    }
+
+    .input-container > input:focus {
+      outline: 0;
+      border-color: #639;
     }
 
     .input-container > .error-message {
@@ -42,11 +53,22 @@ form {
       font-size: 12px;
       font-weight: bold;
       color: #ff4d4f;
+      cursor: default;
     }
 
   .submit {
     margin-top: .5rem;
     width: 100%;
     font-size: 1rem;
-    padding: .5rem;
+    padding: .75rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #7547a3;
+    border: none;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+  }
+
+  .submit:hover {
+    background-color: #5b2d89;
   }
