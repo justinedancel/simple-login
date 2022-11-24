@@ -9,20 +9,20 @@ const Login: React.FC<LoginProps> = props => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [errors, setErrors] = useState<{ username: string, password: string }>({
-    username: "Username is required.",
-    password: "Password is required.",
+    username: "",
+    password: "",
   });
 
   const onUsernameChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newUsername = e.target.value;
 
-    if (!newUsername) {
-      setErrors(oldErrors => ({...oldErrors, username: "Username is required."}));
-    } else if (newUsername.length < 6) {
-      setErrors(oldErrors => ({...oldErrors, username: "Username must be at least 6 characters."}));
-    } else {
-      setErrors(oldErrors => ({...oldErrors, username: ""}));
-    }
+    // if (!newUsername) {
+    //   setErrors(oldErrors => ({...oldErrors, username: "Username is required."}));
+    // } else if (newUsername.length < 6) {
+    //   setErrors(oldErrors => ({...oldErrors, username: "Username must be at least 6 characters."}));
+    // } else {
+    //   setErrors(oldErrors => ({...oldErrors, username: ""}));
+    // }
 
     setUsername(newUsername);
   };
@@ -30,13 +30,13 @@ const Login: React.FC<LoginProps> = props => {
   const onPasswordChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newPassword = e.target.value;
 
-    if (!newPassword) {
-      setErrors(oldErrors => ({...oldErrors, password: "Password is required."}));
-    } else if (newPassword.length < 8) {
-      setErrors(oldErrors => ({...oldErrors, password: "Password must be at least 8 characters."}));
-    } else {
-      setErrors(oldErrors => ({...oldErrors, password: ""}));
-    }
+    // if (!newPassword) {
+    //   setErrors(oldErrors => ({...oldErrors, password: "Password is required."}));
+    // } else if (newPassword.length < 6) {
+    //   setErrors(oldErrors => ({...oldErrors, password: "Password must be at least 8 characters."}));
+    // } else {
+    //   setErrors(oldErrors => ({...oldErrors, password: ""}));
+    // }
 
     setPassword(newPassword);
   };
@@ -44,11 +44,15 @@ const Login: React.FC<LoginProps> = props => {
   const loginSubmitHandler = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (errors.username === "" && errors.password === "") {
-      props.onLoginSubmit(username, password)
-    } else {
-      console.log("Form is invalid.", errors)
-    }
+    // if (!username || !password) {
+    //   console.log("Username & Password are both required.")
+    // } else if (errors.username === "" && errors.password === "") {
+    //   props.onLoginSubmit(username, password)
+    // } else {
+    //   console.log("Form is invalid.", errors)
+    // }
+
+    props.onLoginSubmit(username, password)
   };
 
   return (
