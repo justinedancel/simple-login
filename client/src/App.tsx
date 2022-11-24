@@ -17,10 +17,9 @@ const App: React.FC = () => {
         'Content-Type': 'application/json',
       },
     }).then(response => {
-      console.log(response.data);
+      alert(response.data);
     }).catch(error => {
-      console.log(error);
-      console.log(error.response.data);
+      alert(error.response.data);
     });
   };
 
